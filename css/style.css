@@ -37,7 +37,8 @@ button{
 }
 
 .paragraph {
-  font-size: 2em;
+  font-size: 3em;
+  color: white;
   margin: 0 auto;
   text-align: center;
 }
