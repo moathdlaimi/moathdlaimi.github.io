@@ -13,7 +13,7 @@ $(() => {
         let lat = position.coords.latitude;
 
           $.ajax({
-            url:`http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&APPID=80dd0dc92d5ff0e086d4ae0eeb8918a9`,
+            url:`https://cors-anywhere.herokuapp.com/api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&APPID=80dd0dc92d5ff0e086d4ae0eeb8918a9`,
 
         }).then((data) => {
 
@@ -37,7 +37,7 @@ $(() => {
   else {
     let city = $('input[type="text"]').val()
     $.ajax({
-      url:`http://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=80dd0dc92d5ff0e086d4ae0eeb8918a9`,
+      url:`https://cors-anywhere.herokuapp.com/api.openweathermap.org/data/2.5/weather?q=${city}&APPID=80dd0dc92d5ff0e086d4ae0eeb8918a9`,
 
   }).then((data) => {
 
