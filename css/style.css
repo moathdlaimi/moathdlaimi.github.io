@@ -10,7 +10,7 @@ body{
   background-attachment: inherit;
   background-size:  cover;
   background-repeat: no-repeat;
-  width: 500px;
+  width: auto;
   height: auto;
 }
 
