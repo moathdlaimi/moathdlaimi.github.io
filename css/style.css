@@ -23,7 +23,7 @@ body{
   width:60%;
   margin: auto;
   text-align: center;
-  padding: 30% 0;
+  padding: 20% 0;
 }
 
 input{
@@ -38,7 +38,10 @@ button{
 
 .paragraph {
   font-size: 3em;
-  color: white;
+  color: black;
   margin: 0 auto;
   text-align: center;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
 }
