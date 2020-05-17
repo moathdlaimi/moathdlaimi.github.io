@@ -21,9 +21,9 @@ $(() => {
            const kelvin = data.main.temp;
            const celsius = kelvin - 273;
            let fahrenheit = celsius * (9/5) + 32;
-           const $p = $('<p>').html(`The temperature in ${cit} is ${parseInt(fahrenheit)} fahrenheit`).addClass('paragraph').appendTo('.reports');
+           const $p = $('<p>').html(`The temperature in ${cit} is ${parseInt(fahrenheit)} fahrenheit`).addClass('paragraph').appendTo('.reports').fadeIn();
            let icon = data.weather[0].icon
-           const $img = $('<img>').attr(`src`,`http://openweathermap.org/img/wn/${icon}@2x.png`).appendTo($p);
+           const $img = $('<img>').attr(`src`,`http://openweathermap.org/img/wn/${icon}@2x.png`).appendTo('.reports');
 
 
         },
@@ -49,8 +49,9 @@ $(() => {
      let fahrenheit = celsius * (9/5) + 32;
      let description = data.weather[0].description;
      let icon = data.weather[0].icon
-     const $p = $('<p>').html(`The temperature in ${cit} is ${parseInt(fahrenheit)} fahrenheit \n with ${description}`).addClass('paragraph').appendTo('.reports');
-     const $img = $('<img>').attr(`src`,`http://openweathermap.org/img/wn/${icon}@2x.png`).appendTo($p);
+     const $p = $('<p>').html(`The temperature in ${cit} is ${parseInt(fahrenheit)} fahrenheit \n with ${description}`).addClass('paragraph').appendTo('.reports').fadeIn();
+     const $img = $('<img>').attr(`src`,`http://openweathermap.org/img/wn/${icon}@2x.png`).appendTo('.reports');
+
 
 
 
