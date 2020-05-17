@@ -63,4 +63,10 @@ button{
     height: auto;
   }
 
+
+  .paragraph img {
+    display: block;
+    margin: 0 auto;
+  }
+
 }
