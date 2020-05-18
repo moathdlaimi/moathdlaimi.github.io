@@ -28,7 +28,7 @@ $(() => {
            const $div = $('<div>').addClass('sub-reports').appendTo('.reports');
            const $img = $('<img>').attr(`src`,`http://openweathermap.org/img/wn/${icon}@2x.png`).appendTo($div);
            const $h1 = $('<h1>').html(parseInt(fahrenheit)).addClass('h1temp').appendTo($div)
-           const $p = $('<p>').html(description +'\n in '+ cit +' with highest of '+ parseInt(maxTemp)).addClass('paragraph').appendTo($div).hide().fadeIn(2000);
+           const $p = $('<p>').html(description +'\n in '+ cit +' with a high of '+ parseInt(maxTemp)).addClass('paragraph').appendTo($div).hide().fadeIn(2000);
 
 
 
@@ -63,7 +63,7 @@ $(() => {
      const $div = $('<div>').addClass('sub-reports').appendTo('.reports');
      const $img = $('<img>').attr(`src`,`http://openweathermap.org/img/wn/${icon}@2x.png`).appendTo($div);
      const $h1 = $('<h1>').html(parseInt(fahrenheit)).addClass('h1temp').appendTo($div)
-     const $p = $('<p>').html(description +'\n in '+ cit+ ' with highest of '+ parseInt(maxTemp)).addClass('paragraph').appendTo($div).hide().fadeIn(2000);
+     const $p = $('<p>').html(description +'\n in '+ cit+ ' with a high of '+ parseInt(maxTemp)).addClass('paragraph').appendTo($div).hide().fadeIn(2000);
 
   },
   ()=>{
