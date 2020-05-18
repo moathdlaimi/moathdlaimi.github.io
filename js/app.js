@@ -6,6 +6,7 @@ $(() => {
   $('.btn').on('click', (event) =>{
     event.preventDefault();
 
+
     if($(event.currentTarget).attr('id') === 'location' ){
     if ("geolocation" in navigator){
     	navigator.geolocation.getCurrentPosition(function(position){
@@ -39,6 +40,7 @@ $(() => {
   }
   else {
     let city = $('input[type="text"]').val()
+    
     $.ajax({
       url:`https://cors-anywhere.herokuapp.com/api.openweathermap.org/data/2.5/weather?q=${city}&APPID=80dd0dc92d5ff0e086d4ae0eeb8918a9`,
 
