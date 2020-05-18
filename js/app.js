@@ -104,7 +104,7 @@ $(() => {
 //this is the news banner loop
 
 $.ajax({
-  url:'http://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=eb5f2fddb8254262bfb0e34db0ba6f8d',
+  url:'https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=eb5f2fddb8254262bfb0e34db0ba6f8d',
 })
 .then((data)=> {
   const $bannerdiv = $('.banner');
@@ -113,7 +113,7 @@ $.ajax({
   const newsLoop = () => {
     setTimeout(function(){
       // $bannerdiv.html(data.articles[i].title).fadeIn(1000);
-      $bannerdiv.html(newsArray[i]).fadeIn(100);
+      $bannerdiv.html(newsArray[i]);
       i++;
       if(i <= 2){
         newsLoop()
@@ -123,7 +123,7 @@ $.ajax({
         // this will make it an infinte loop
       }
 
-    },3000)
+    },2000)
   }
   newsLoop()
 
