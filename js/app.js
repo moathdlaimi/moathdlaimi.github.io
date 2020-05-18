@@ -1,5 +1,29 @@
 $(() => {
 
+  // ******************
+  // ******************
+  // ******************
+  //this is harmless infinte loop to keep updating the time by the second
+  let x = 0;
+  const dateLoop = () => {
+    setTimeout(function(){
+      $('.date').html(Date());
+      x++;
+      if(x < 2){
+        dateLoop()
+      } else {
+        x = 0;
+        dateLoop();
+      }
+
+    },100)
+  }
+  dateLoop()
+
+  // ******************
+  // ******************
+  // ******************
+
   $('.btn').on('click', (event) =>{
     event.preventDefault();
 
@@ -74,5 +98,44 @@ $(() => {
   }
 
 })// event closing
+// ******************
+// ******************
+// ******************
+//this is the news banner loop
+
+$.ajax({
+  url:'http://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=eb5f2fddb8254262bfb0e34db0ba6f8d',
+})
+.then((data)=> {
+  const $bannerdiv = $('.banner');
+  let i = 0;
+  const newsArray = ['first report','second report','third report']
+  const newsLoop = () => {
+    setTimeout(function(){
+      // $bannerdiv.html(data.articles[i].title).fadeIn(1000);
+      $bannerdiv.html(newsArray[i]).fadeIn(100);
+      i++;
+      if(i <= 2){
+        newsLoop()
+      } else {
+        i = 0;
+        newsLoop();
+        // this will make it an infinte loop
+      }
+
+    },3000)
+  }
+  newsLoop()
+
+
+},
+()=> {
+  console.log('News Server Down');
+})
+
+
+// ******************
+// ******************
+// ******************
 
 }) //onload closing
