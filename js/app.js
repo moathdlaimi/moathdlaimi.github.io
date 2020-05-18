@@ -1,4 +1,3 @@
-
 $(() => {
 
   $('.btn').on('click', (event) =>{
@@ -22,8 +21,11 @@ $(() => {
            let fahrenheit = celsius * (9/5) + 32;
            let description = data.weather[0].description;
            let icon = data.weather[0].icon
-           const $p = $('<p>').html(`The temperature in ${cit} is ${parseInt(fahrenheit)} fahrenheit \n with ${description} `).addClass('paragraph').appendTo('.reports').hide().fadeIn(2000);
-           const $img = $('<img>').attr(`src`,`http://openweathermap.org/img/wn/${icon}@2x.png`).appendTo('.reports');
+
+           const $div = $('<div>').addClass('sub-reports').appendTo('.reports');
+           const $img = $('<img>').attr(`src`,`http://openweathermap.org/img/wn/${icon}@2x.png`).appendTo($div);
+           const $p = $('<p>').html(`The temperature in ${cit} is ${parseInt(fahrenheit)} fahrenheit \n with ${description} `).addClass('paragraph').appendTo($div).hide().fadeIn(2000);
+
 
 
         },
@@ -50,8 +52,10 @@ $(() => {
      let fahrenheit = celsius * (9/5) + 32;
      let description = data.weather[0].description;
      let icon = data.weather[0].icon
-     const $p = $('<p>').html(`The temperature in ${cit} is ${parseInt(fahrenheit)} fahrenheit \n with ${description}`).addClass('paragraph').appendTo('.reports').hide().fadeIn(2000);
-     const $img = $('<img>').attr(`src`,`http://openweathermap.org/img/wn/${icon}@2x.png`).appendTo('.reports');
+
+     const $div = $('<div>').addClass('sub-reports').appendTo('.reports');
+     const $img = $('<img>').attr(`src`,`http://openweathermap.org/img/wn/${icon}@2x.png`).appendTo($div);
+     const $p = $('<p>').html(`The temperature in ${cit} is ${parseInt(fahrenheit)} fahrenheit \n with ${description} `).addClass('paragraph').appendTo($div).hide().fadeIn(2000);
 
   },
   ()=>{
