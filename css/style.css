@@ -63,8 +63,13 @@ button{
 
 .paragraph img {
   background-color: black;
+  width: 150px;
 }
 
+.h1temp {
+  color:orange;
+  font-size: 75px;
+}
 @media (min-width: 1000px) {
   body {
     background-image: url('images/background.jpg');
@@ -86,6 +91,6 @@ button{
   .reports{
     display: flex;
   }
-  
+
 
 }
