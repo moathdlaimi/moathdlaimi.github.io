@@ -9,15 +9,26 @@ $(() => {
     url:'https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=eb5f2fddb8254262bfb0e34db0ba6f8d',
   })
   .then((data)=> {
+    ///
+    let newsArray = [];
+    for (var x = 0; x < data.articles.length; x++) {
+      let dataToPush = data.articles[x].title
+      newsArray.push({'news': dataToPush,'url': data.articles[x].url})
+      sessionStorage.setItem(newsArray, JSON.stringify(newsArray))
+    console.log(newsArray);
+
+    }
+
+    //
+    //
     const $bannerdiv = $('.banner');
     let i = 0;
-    const newsArray = ['first report first report first report first report','second report','third report']
     const newsLoop = () => {
       setTimeout(function(){
         // $bannerdiv.html(data.articles[i].title).fadeIn(1000);
-        $bannerdiv.html(newsArray[i]);
+        $bannerdiv.html(`<a class="newsLinks" target="_blank" href="${newsArray[i].url}">${newsArray[i].news}</a>`);
         i++;
-        if(i <= 2){
+        if(i < newsArray.length){
           newsLoop()
         } else {
           i = 0;
@@ -25,7 +36,7 @@ $(() => {
           // this will make it an infinte loop
         }
 
-      },2000)
+      },3000)
     }
     newsLoop()
 
