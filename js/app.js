@@ -9,18 +9,13 @@ $(() => {
     url:'https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=eb5f2fddb8254262bfb0e34db0ba6f8d',
   })
   .then((data)=> {
-    ///
+
     let newsArray = [];
     for (var x = 0; x < data.articles.length; x++) {
-      let dataToPush = data.articles[x].title
-      newsArray.push({'news': dataToPush,'url': data.articles[x].url})
-      sessionStorage.setItem(newsArray, JSON.stringify(newsArray))
-    console.log(newsArray);
-
+      let dataToPush = data.articles[x].title;
+      newsArray.push({'news': dataToPush,'url': data.articles[x].url});
     }
 
-    //
-    //
     const $bannerdiv = $('.banner');
     let i = 0;
     const newsLoop = () => {
