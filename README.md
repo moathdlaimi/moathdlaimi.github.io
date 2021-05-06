@@ -1,4 +1,4 @@
-Live Sise : https://moathdlaimi.github.io/
+Live Site : https://moathdlaimi.github.io/
 
 <!-- WEATHER APP -->
 
